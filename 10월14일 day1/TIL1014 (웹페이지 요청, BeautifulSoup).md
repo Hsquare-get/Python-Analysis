@@ -172,42 +172,42 @@ bs.h1.strings
   - **find()** : 제일 먼저 인식되는 태그 하나를 찾음 (bs.element.Tag 객체로 리턴, 없으면 None 리턴)
 
     ```python
-    find('div') == find_all('div', limit=1)
+    bs.find('div') == bs.find_all('div', limit=1)
     ```
 
   - **find_all()** : 모든 태그들을 찾음 (bs4.element.ResultSet 객체로 리턴)
 
     ```python
-    find_all('div')
-    find_all(['p', 'img'])
-    find_all(re.compile('^b'))
-    find_all(id='link2')
-    find_all(id=re.compile('para$'))
-    find_all('a', class_='sister') # class는 예약어이기 때문에 class_ 사용
-    find_all(src=re.compile('png$'), id='link1')
-    find_all(text='example') # 정확하게 example만
-    find_all(text=re.compile('example')) # example을 포함하여
-    find_all(text=re.compile('^test'))
-    find_all('a', text='python')
-    find_all('a', limit=2) # 2개까지만 찾음
+    bs.find_all('div')
+    bs.find_all(['p', 'img'])
+    bs.find_all(re.compile('^b'))
+    bs.find_all(id='link2')
+    bs.find_all(id=re.compile('para$'))
+    bs.find_all('a', class_='sister') # class는 예약어이기 때문에 class_ 사용
+    bs.find_all(src=re.compile('png$'), id='link1')
+    bs.find_all(text='example') # 정확하게 example만
+    bs.find_all(text=re.compile('example')) # example을 포함하여
+    bs.find_all(text=re.compile('^test'))
+    bs.find_all('a', text='python')
+    bs.find_all('a', limit=2) # 2개까지만 찾음
     ```
 
   - **select()** : css 선택자에 알맞는 돔객체를 찾는 메서드
 
     ```python
-    select('div')
-    select('.class')
-    select('#id')
+    bs.select('div')
+    bs.select('.class')
+    bs.select('#id')
     
-    select('상위태그명 > 자식태그명 > 자손태그명')
-    select('상위태그명.class명 > 자식태그명.class명')
-    select('상위태그명.class명 자손태그명')
-    select('#id명 > 자식태그명.class명')
-    select('태그명[속성]')
-    select('태그명[속성=값]')
-    select('태그명[속성$=값]')
-    select('태그명[속성^=값]')
-    select('태그명:nth-of-type(3)')
+    bs.select('상위태그명 > 자식태그명 > 자손태그명')
+    bs.select('상위태그명.class명 > 자식태그명.class명')
+    bs.select('상위태그명.class명 자손태그명')
+    bs.select('#id명 > 자식태그명.class명')
+    bs.select('태그명[속성]')
+    bs.select('태그명[속성=값]')
+    bs.select('태그명[속성$=값]')
+    bs.select('태그명[속성^=값]')
+    bs.select('태그명:nth-of-type(3)')
     ```
 
     
