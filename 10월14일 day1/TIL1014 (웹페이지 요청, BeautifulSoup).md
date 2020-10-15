@@ -192,7 +192,7 @@ bs.h1.strings
     bs.find_all('a', limit=2) # 2개까지만 찾음
     ```
 
-  - **select()** : css 선택자에 알맞는 돔객체를 찾는 메서드
+  - **select()** : css 선택자에 알맞는 돔객체를 찾는 메서드 <span style="color:red;">**(리스트 객체로 반환)**</span>
 
     ```python
     bs.select('div')
