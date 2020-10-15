@@ -159,8 +159,8 @@ bs.h1['속성명']
 bs.h1.attrs # 모든 속성 추출
 
 # 컨텐츠 추출
-bs.h1.string # bs.h1.string_strip()
-bs.h1.text # bs.h1.text_strip()
+bs.h1.string # bs.h1.string.strip()
+bs.h1.text # bs.h1.text.strip()
 bs.h1.contents
 bs.h1.strings
 ```
