@@ -90,11 +90,13 @@ bs.h1.strings
 - Selenium-WebDriver는 자동화를 위한 각 브라우저의 기본 지원을 사용하여 브라우저를 직접 호출
 
 ```python
-# WebDriver 객체 생성
+# WebDriver 객체 생성 (세션 정보도 포함)
 driver = webdriver.Chrome("C:/PyStexam/selenium/chromedriver")
+driver.implicitly_wait(3) # 렌더링 끝날때까지 3초 기다리기
+# 렌더링이 일찍되면 더 기다리지 않고 다음 코드 수행, 한번만 설정하면 driver를 사용하는 모든 코드에 적용
 
 # 페이지 가져오기
-diver.get(url, 3) # driver.implicitly_wait(3), 렌더링 끝날때까지 3초를 기다림
+diver.get('url')
 ```
 
 | 조건에 맞는 요소 한 개 찾기                                | 조건에 맞는 모든 요소 찾기                                   |
@@ -131,7 +133,7 @@ diver.get(url, 3) # driver.implicitly_wait(3), 렌더링 끝날때까지 3초를
 
   ```python
   # <a href="https://www.python.org/">파이썬 학습 사이트</a>
-  element = driver.find_element_by_partial_link_text('사이트')
+  element = driver.find_elements_by_partial_link_text('사이트')
   ```
 
 - CSS 선택자로 element 찾기
