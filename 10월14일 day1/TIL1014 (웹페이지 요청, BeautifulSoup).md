@@ -209,5 +209,3 @@ bs.h1.strings
     bs.select('태그명[속성^=값]')
     bs.select('태그명:nth-of-type(3)')
     ```
-
-    
