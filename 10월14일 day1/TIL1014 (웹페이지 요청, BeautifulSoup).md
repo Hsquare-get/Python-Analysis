@@ -42,9 +42,9 @@
 
 > 웹 서버에 페이지 or 정보를 요청할 때 함께 전달하는 데이터
 
-- GET 방식 요청 : Query 문자열 ####################
+- GET 방식 요청 : Query 문자열
 
-- POST 방식 요청 : 요청 파라미터 ###################
+- POST 방식 요청 : 요청 파라미터
 
 - urllib.parse.urlparse('url') : 아규먼트로 지정된 URL 문자열의 구성정보를 저장하는 **urllib.parse.ParseResult 객체**를 리턴함 
 
