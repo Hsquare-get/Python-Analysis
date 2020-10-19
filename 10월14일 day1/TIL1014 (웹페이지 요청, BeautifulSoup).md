@@ -27,7 +27,7 @@
   - res.read() : 웹 서버가 전달한 데이터(응답 body)를 <span style="color:red;">**바이트열(Bytes 객체)**</span>로 읽어 옴 (바이트열은 16진수로 이루어진 수열)
 
     ```python
-    res.read.decode('utf-8')
+    res.read().decode('utf-8')
     ```
 
   - res.info() : 웹 페이지의 문자 셋 정보를 페이지 소스보기말고도 파이썬으로도 확인할 수 있음
