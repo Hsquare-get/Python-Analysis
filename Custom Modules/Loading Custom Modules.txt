@@ -1,0 +1,15 @@
+# 구글 드라이브 마운트
+from google.colab import drive
+drive.mount('/content/drive')
+
+# 환경변수 path 추가
+import sys
+sys.path.append('/content/drive/MyDrive/Colab Notebooks/KBeT/Custom Modules/')
+
+# 사용자 정의 모듈(.py) 불러오기
+import pastweather
+
+# Test Call
+cls_instance = pastweather.PastWeather('20201215', '108') # {108 : '서울', 112 : '인천'}
+dataframe = cls_instance.get_dataframe()
+display(dataframe)
